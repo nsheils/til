@@ -1,30 +1,30 @@
 {{ define "title" }}
-    Today I Learnt — David Winterbottom
+    Today I Learned — Natalie Sheils
 {{ end }}
 
 {{ define "header" }}
     <header id="banner-home">
-        <h1>Today I Learnt&hellip;</h1>
+        <h1>Today I Learned&hellip;</h1>
     </header>
 {{ end }}
 
 {{ define "description" }}
-    A collection of TIL posts started in summer 2020.
+    A collection of TIL posts started in Fall 2024.
 {{ end }}
 
 {{ define "main" }}
 
-    <blockquote id="home_quote">
-        <p>Every day is a school day</p>
-        <footer>Me, every day 🤔</footer>
-    </blockquote>
+<!--    <blockquote id="home_quote">-->
+<!--        <p>Every day is a school day</p>-->
+<!--        <footer>Me, every day 🤔</footer>-->
+<!--    </blockquote>-->
 
     {{ $posts := where site.RegularPages "Type" "in" "posts" }}
 
     <p>
         This is a catalogue of notable
-        things <a href="https://codeinthehole.com">David Winterbottom</a>
-        has learnt (since July 2020).
+        things <a href="https://nsheils.github.io">Natalie Sheils</a>
+        has learned (since September 2024).
     </p>
 
     <!-- 
@@ -58,7 +58,7 @@
     </p>
 
 
-    <h3>Recently I learnt...</h3>
+    <h3>Recently I learned...</h3>
     
     {{ partial "posts.html" (first 20 $posts) }}
 
@@ -67,6 +67,7 @@
         Other people making public notes on what they are learning:
     </p>
     <ul>
+        <li><a href="https://til.codeinthehole.com/">David Winterbottom</a>--The person I blatantly copied in creation of this site.</li>
         <li><a href="https://samueljsb.co.uk/til/">Sam Searles-Bryant</a></li>
         <li><a href="https://flagzeta.org/til/">Federico Marani</a></li>
         <li><a href="https://github.com/jbranchaud/til">Josh Branchaud</a></li>
@@ -81,6 +82,6 @@
 {{ define "footer" }}
     <footer id="footer">
         This is a <a href="https://gohugo.io/">Hugo</a>-generated static site, hosted using <a href="https://pages.github.com/">Github Pages</a>.<br/>
-        Source code available at: <a href="https://github.com/codeinthehole/til/">https://github.com/codeinthehole/til/</a>
+        Source code available at: <a href="https://github.com/nsheils/til/">https://github.com/nsheils/til/</a>
     </footer>
 {{ end }}

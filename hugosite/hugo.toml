@@ -1,8 +1,8 @@
 # See https://gohugo.io/getting-started/configuration/
 
-baseURL = "https://til.codeinthehole.com/"
+baseURL = "https://nsheils.github.io/til/"
 languageCode = "en-us"
-title = "Today I Learnt — David Winterbottom"
+title = "Today I Learned — Natalie Sheils"
 
 # Build static site to /docs folder so Github pages can serve it.
 publishDir = "../docs"
