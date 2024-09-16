@@ -6,4 +6,5 @@ summary: "Making github pages is incredibly easy"
 ---
 
 It's truly incredibly easy to make a GitHub page. Directions are available [here](https://pages.github.com/).
-It's not clear to me that I have actually added the /til page to my github page but we'll soon find out.
+However, to use GitHub pages to make this site, it is even easier.
+All I had to do was go to Settings -> Pages -> Branch: main -> Folder: /docs
