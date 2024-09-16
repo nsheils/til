@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+      <title>Tags - Today I Learned — Natalie Sheils</title>
+    <link>https://nsheils.github.io/til/tags/</link>
+    <description>Tags TILs - Natalie Sheils</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 15 Sep 2024 23:45:50 -0500</lastBuildDate>
+    
+	<atom:link href="https://nsheils.github.io/til/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+
+    
+    <item>
+      <title>Github</title>
+      <link>https://nsheils.github.io/til/tags/github/</link>
+      <pubDate>Sun, 15 Sep 2024 23:45:50 -0500</pubDate>
+      
+      <guid>https://nsheils.github.io/til/tags/github/</guid>
+      <description></description>
+    </item>
+    
+
+  </channel>
+</rss>
