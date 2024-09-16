@@ -1,5 +1,5 @@
 server:
-	cd hugosite && hugo server --renderToMemory
+	cd hugosite && hugo server --renderToMemory --config hugo.toml
 
 # Run the server and bind to the IP address of the en0 interface so that the
 # site can be accessed from other devices on the network.
