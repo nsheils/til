@@ -32,7 +32,7 @@ function main() {
     # Open file pre-populated with Hugo frontmatter.
     # The `<!--more-->` tag is used to indicate where the summary should end.
     local title="$(tr '[:lower:]' '[:upper:]' <<< ${description:0:1})${description:1}"
-    date=$(date -+%Y-%m-%dT%H:%M:%S%z)
+    date=$(date +%Y-%m-%dT%H:%M:%S%z)
     cat >"$filepath" <<- CONTENT
 ---
 title: "$title"
