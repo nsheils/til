@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="description" content="{{ block "description" . }}{{ end }}">
+
+        {{ printf `<link rel="shortcut icon" href="%s">` ("favicon.ico" | absURL) | safeHTML }}
+
+        {{ if .IsHome }}
+            <link rel="alternate" type="application/rss+xml" href="/posts/index.xml" title="Today I learned...">
+        {{ else }}
+            {{ with .OutputFormats.Get "rss" }}
+                {{ printf `<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
+            {{ end -}}
+        {{ end }}
+
+        {{ $style := resources.Get "css/main.scss" | css.Sass | resources.Minify }}
+        <link rel="stylesheet" href="{{ $style.RelPermalink }}">
+
+        {{ block "head" . }}{{ end }}
+
+        <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-4500T4RE03"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {dataLayer.push(arguments); }
+
+            // https://developers.google.com/analytics/devguides/collection/gtagjs/user-opt-out
+            window['ga-disable-G-4500T4RE03'] = location.hostname != "nsheils.github.io/til/";
+            gtag('js', new Date());
+            gtag('config', 'G-4500T4RE03');
+        </script>
+
+    </head>
+
+    <body>
+        {{ block "header" . }}
+            <header id="banner">
+                <h2><a href="{{ .Site.BaseURL }}">Today I learned&hellip;</a></h2>
+            </header>
+        {{ end }}
+
+        <main id="content">
+            {{ block "main" . }}{{ end }}
+        </main>
+
+        {{ block "footer" . }}{{ end }}
+
+        {{ block "scripts" . }}{{ end }}
+    </body>
+</html>

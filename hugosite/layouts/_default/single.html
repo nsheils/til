@@ -1,0 +1,104 @@
+{{ define "head" }}
+<meta property="og:type" content="article" />
+<meta property="og:url" content="{{ .Permalink }}" />
+<meta property="og:title" content="TIL {{ replace .Title "`" "'" }} — Natalie Sheils" />
+<meta property="og:description" content="{{ .Summary }} — can be read in {{ .ReadingTime }} {{ cond (eq .ReadingTime 1) "minute" "minutes" }}" />
+
+{{ end }}
+
+{{ define "title" }}
+    TIL {{ replace .Title "`" "'" }} — Natalie sheils
+{{ end }}
+
+{{ define "description" }}
+    {{ .Summary | markdownify | plainify }}
+{{ end }}
+
+{{ define "main" }}
+    <article>
+        <header id="post-header">
+            <div id="date_sentence">
+                On <time>{{ .Date.Format "January 2, 2006" }}</time>, <a href="https://nsheils.github.io" title="that is, Natalie Sheils">I</a> learned ...
+            </div>
+            <h1>{{ .Title | markdownify }}</h1>
+        </header>
+
+        {{- .Content -}}
+
+    </article>
+{{ end }}
+
+{{ define "footer" }}
+    <footer id="footer">
+
+        {{/* Create a slice variable to keep track of which pages have been rendered */}}
+        {{ $listed := slice }}
+
+        {{/* Loop over each tag page */}}
+        {{ $tag_pages := .GetTerms "tags" }}
+        {{ range $tag_pages }}
+
+            {{/* Select first 10 page with same tag */}}
+            {{ $related_tag_pages := first 10 ( where .Pages "Title" "!=" $.Title ) }}
+
+            {{ if $listed }}
+                {{/* Pages have already been listed by a previous tag - filter down to those not listed*/}}
+                {{ $related_tag_pages := $related_tag_pages | intersect (where .Pages "Title" "not in" $listed) }}
+
+                {{ if $related_tag_pages }}
+                    <p>Other things learned about <a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>:</p>
+                    <ul>
+                        {{ range $related_tag_pages }}
+                            <li><a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a></li>
+
+                            {{/* Add page to slice */}}
+                            {{ $listed = $listed | append .Title }}
+                        {{ end }}
+                    </ul>
+                {{ end }}
+            {{ else }}
+                {{/* No listed pages yet */}}
+
+                {{ if $related_tag_pages }}
+                    <p>Other things learned about <a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>:</p>
+                    <ul>
+                        {{ range $related_tag_pages }}
+                            <li><a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a></li>
+
+                            {{/* Add page to slice */}}
+                            {{ $listed = $listed | append .Title }}
+                        {{ end }}
+                    </ul>
+                {{ end }}
+
+            {{ end }}
+
+        {{ end }}
+
+        <br/>
+        <hr color="#eee"/>
+
+        {{ if and (.Prev) (not (.Next)) }}
+            <p>⌨️ Jump to the previous TIL using the ◀️ cursor key.</p>
+        {{ end }}
+        {{ if and (not (.Prev)) (.Next) }}
+            <p>⌨️ Jump to the next TIL using the ▶️ cursor key.</p>
+        {{ end }}
+        {{ if and (.Prev) (.Next) }}
+            <p>⌨️ Jump to the previous/next TIL using the ◀️ or ▶️ cursor keys.</p>
+        {{ end }}
+    </footer>
+{{ end }}
+
+{{ define "scripts" }}
+    <script src="//cdnjs.cloudflare.com/ajax/libs/mousetrap/1.4.6/mousetrap.min.js"></script>
+    <script>
+        {{ if .Prev}}
+            Mousetrap.bind("left", function() { window.location.replace("{{ .Prev.RelPermalink }}"); })
+        {{ end }}
+
+        {{ if .Next}}
+            Mousetrap.bind("right", function() { window.location.replace("{{ .Next.RelPermalink }}"); })
+        {{ end }}
+    </script>
+{{ end }}

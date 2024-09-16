@@ -1,0 +1,16 @@
+{{ define "title" }}
+    {{ .Data.Term }} — Today I learned — Natalie Sheils
+{{ end }}
+
+{{ define "main" }}
+    <h1>Things learned about {{ .Data.Term }}</h1>
+
+    {{ .Content }}
+
+    {{ partial "posts.html" .Pages }}
+
+    <p>
+        Browse <a href="/tags/">all tags</a> or <a href="/posts/">all posts</a>.
+    </p>
+
+{{ end }}

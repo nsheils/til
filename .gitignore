@@ -1,0 +1,7 @@
+/tags
+
+# Temp files for generating assets
+hugosite/resources/_gen/
+
+# PyCharm
+.idea

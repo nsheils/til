@@ -1,0 +1,8 @@
+# Generated static site
+docs/
+
+# Lock files
+*.lock
+
+# Image files
+*.png

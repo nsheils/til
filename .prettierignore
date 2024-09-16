@@ -1,0 +1,11 @@
+*.json
+*.html
+*.xml
+*.css
+*.scss
+
+# Ignore Vale files
+vale
+
+# Ignore the posts symlink
+hugosite/content/

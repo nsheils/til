@@ -1,0 +1,87 @@
+{{ define "title" }}
+    Today I Learned — Natalie Sheils
+{{ end }}
+
+{{ define "header" }}
+    <header id="banner-home">
+        <h1>Today I Learned&hellip;</h1>
+    </header>
+{{ end }}
+
+{{ define "description" }}
+    A collection of TIL posts started in Fall 2024.
+{{ end }}
+
+{{ define "main" }}
+
+<!--    <blockquote id="home_quote">-->
+<!--        <p>Every day is a school day</p>-->
+<!--        <footer>Me, every day 🤔</footer>-->
+<!--    </blockquote>-->
+
+    {{ $posts := where site.RegularPages "Type" "in" "posts" }}
+
+    <p>
+        This is a catalogue of notable
+        things <a href="https://nsheils.github.io">Natalie Sheils</a>
+        has learned (since September 2024).
+    </p>
+
+    <!-- 
+    Show recent tags
+    ----------------
+    We two slices to track the tag pages and their names. It's easier to
+    check uniqueness using the name.
+    -->
+    {{ $recent_tag_pages := slice }}
+    {{ $recent_tag_names := slice }}
+
+    {{ $recent_posts := (first 5 $posts) }}
+    {{ range $recent_posts }}
+        {{ range .GetTerms "tags" }}
+            {{ if not (in $recent_tag_names .Title) }}
+                {{ $recent_tag_pages = $recent_tag_pages | append . }}
+                {{ $recent_tag_names = $recent_tag_names | append .Title }}
+            {{ end }}
+        {{ end }}
+    {{ end }}
+
+    {{ $num_recent_tag_pages := len $recent_tag_pages }}
+    <p>
+        There have been <strong>{{ len $posts }}</strong> posts so far —
+        recent topics include 
+        {{ range $i, $p := $recent_tag_pages }}{{ if eq $i (sub $num_recent_tag_pages 1) }} and {{ else if $i }}, {{ end -}}<a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>{{ end }}.
+    </p>
+
+    <p>
+        You can browse posts <a href="/posts/">chronologically</a> or <a href="/tags/">by tag</a>.
+    </p>
+
+
+    <h3>Recently I learned...</h3>
+    
+    {{ partial "posts.html" (first 20 $posts) }}
+
+    <h3>Other TIL sites</h3>
+    <p>
+        Other people making public notes on what they are learning:
+    </p>
+    <ul>
+        <li><a href="https://til.codeinthehole.com/">David Winterbottom</a>--The person I blatantly copied in creation of this site.</li>
+        <li><a href="https://samueljsb.co.uk/til/">Sam Searles-Bryant</a></li>
+        <li><a href="https://flagzeta.org/til/">Federico Marani</a></li>
+        <li><a href="https://github.com/jbranchaud/til">Josh Branchaud</a></li>
+        <li><a href="https://til.simonwillison.net/">Simon Willison</a></li>
+        <li><a href="https://github.com/jwworth/til">Jake Worth</a></li>
+        <li><a href="https://til.hashrocket.com/">Hashrocket</a></li>
+        <li><a href="https://github.com/thoughtbot/til">Thoughtbot</a></li>
+    </ul>
+
+{{ end }}
+
+{{ define "footer" }}
+    <footer id="footer">
+        This is a <a href="https://gohugo.io/">Hugo</a>-generated static site, hosted using <a href="https://pages.github.com/">Github Pages</a>.<br/>
+        Source code available at: <a href="https://github.com/nsheils/til/">https://github.com/nsheils/til/</a>
+    </footer>
+{{ end }}

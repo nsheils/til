@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+      <title>Natalie Sheils's TILs</title>
+    <link>https://nsheils.github.io/til/posts/</link>
+    <description>All TILs - Natalie Sheils</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 16 Sep 2024 01:12:19 -0500</lastBuildDate>
+    
+	<atom:link href="https://nsheils.github.io/til/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+
+    
+    <item>
+      <title>Cannot unfork in github</title>
+      <link>https://nsheils.github.io/til/posts/cannot-unfork-in-github/</link>
+      <pubDate>Mon, 16 Sep 2024 01:12:19 -0500</pubDate>
+      
+      <guid>https://nsheils.github.io/til/posts/cannot-unfork-in-github/</guid>
+      <description>Although you cannot &amp;ldquo;unfork&amp;rdquo; a github repository, you can do so by cloning what you&amp;rsquo;ve got into a new repository then deleting the original which is linked back to the thing you no longer want to fork.
+</description>
+    </item>
+    
+    <item>
+      <title>How to create a github page</title>
+      <link>https://nsheils.github.io/til/posts/how-to-create-a-github-page/</link>
+      <pubDate>Sun, 15 Sep 2024 23:45:50 -0500</pubDate>
+      
+      <guid>https://nsheils.github.io/til/posts/how-to-create-a-github-page/</guid>
+      <description>Making github pages is incredibly easy</description>
+    </item>
+    
+
+  </channel>
+</rss>

@@ -1,0 +1,49 @@
+# Tech jargon
+src
+quickfix
+png
+filepaths
+config
+kwarg
+superset
+ing
+rebase
+reflog
+filepath
+repo
+truthy
+ctag
+ctags
+Ctags
+boolean
+booleans
+pastable
+subfolder
+filetype
+slugified
+
+# Software
+ripgrep
+Pytest
+systemd
+pytz
+BuildKit
+Postgres
+Mypy
+
+# Applications
+Github
+Alexa
+Calendly
+
+# Names
+Sheils
+
+# British
+onwards
+foodborne
+
+# Companies
+Hashrocket
+
+# Product names
