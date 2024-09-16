@@ -18,5 +18,5 @@ git remote add origin https://github.com/YOUR_USERNAME/NEW_REPOSITORY_NAME.git
 git push -u origin main
 ```
 
-Now that the code is safely in the new repository, delete the old one from your
+Now that the code is in the new repository, delete the old one from your
 account.

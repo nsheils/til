@@ -30,6 +30,7 @@ pytz
 BuildKit
 Postgres
 Mypy
+macOS
 
 # Applications
 Github
@@ -38,6 +39,11 @@ Calendly
 
 # Names
 Sheils
+Winterbottom
+Marani
+Branchaud
+Willison
+Thoughtbot
 
 # British
 onwards
