@@ -23,7 +23,7 @@ function main() {
         echo "TIL repo has uncommitted changes. Commit these changes and try again" >&2
         exit 1
     fi
-    git checkout master 2> /dev/null
+    git checkout main 2> /dev/null
 
     # Generate appropriate filepath
     local description="$1"
