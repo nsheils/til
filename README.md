@@ -1,8 +1,8 @@
 # Today I learned
 
+![Website Up](https://img.shields.io/website?url=https%3A%2F%2Fnsheils.github.io%2Ftil%2F)
 ![Build and Deploy](https://img.shields.io/github/actions/workflow/status/nsheils/til/build-and-deploy.yml?logo=githubpages&link=https%3A%2F%2Fgithub.com%2Fnsheils%2Ftil%2Factions%2Fworkflows%2Fbuild-and-deploy.yml)
 ![License](https://img.shields.io/github/license/nsheils/til)
-![Website Up](https://img.shields.io/website?url=https%3A%2F%2Fnsheils.github.io%2Ftil%2F)
 ![Commit Activity](https://img.shields.io/github/commit-activity/m/nsheils/til?logo=github)
 
 A Hugo-built static site of Today-I-learned (TIL) posts, designed to make it as
@@ -18,23 +18,6 @@ This repo provides two Bash scripts:
 - `scripts/til_screenshot.sh` - Capture a screenshot of a selection of the
   screen and save it to the repo's `static/images` directory. The system
   clipboard receives the Markdown to include in the post.
-
-## Publication
-
-[Hugo](https://gohugo.io/) builds the TIL posts into a static HTML site. The
-compiled static site is in the `docs/` folder.
-
-The published site has URL: <https://nsheils.github.io/til>
-
-## Hugo theme
-
-The theme for the site is a customized version of
-[Etch](https://github.com/LukasJoswiak/etch).
-
-## Repo structure
-
-We've structured the repo to keep the TIL content separate from Hugo—all posts
-live in `posts/` while all Hugo-related content is in `/hugosite`.
 
 ## Installation
 
@@ -89,13 +72,14 @@ To add screenshots, `CTRL+Z` to background Vim and use the screenshot helper:
 til_screenshot $description
 ```
 
-E.g.
+e.g.
 
 ```sh
 til_screenshot Alfred preferences UI
 ```
+.
 
-which will trigger macOS's `screencapture` utility to capture a selection of the
+This triggers macOS's `screencapture` utility to capture a selection of the
 screen. After selection, the resulting PNG image is saved to `static/images/`
 using a filename based on a slugified `$description` and the Markdown to include
 in the post are added to the system clipboard.
@@ -115,20 +99,37 @@ Config files exist for:
 
 Use `vale` and `markdownlint` as linters, and `prettier` as a pre-save fixer.
 
+## Publication
+
+[Hugo](https://gohugo.io/) builds the TIL posts into a static HTML site. The
+compiled static site is in the `docs/` folder.
+
+The published site has URL: <https://nsheils.github.io/til>
+
+## Repo structure
+
+We've structured the repo to keep the TIL content separate from Hugo—all posts
+live in `posts/` while all Hugo-related content is in `/hugosite`.
+
 ## Acknowledgements
 
 I shamelessly copied this from
 [David Winterbottom](https://github.com/codeinthehole/til/). I have made some
 modifications to the original codebase to suit my needs.
 
+### Hugo theme
+
+The theme for the site is a customized version of
+[Etch](https://github.com/LukasJoswiak/etch).
+
 ## Other TIL Collections
 
 - [David Winterbottom](https://til.codeinthehole.com/) --The person I blatantly
-  copied in creation of this site.
-- [Sam Searles-Bryant](https://samueljsb.co.uk/til/) -[Federico Marani](https://flagzeta.org/til/) -[Josh Branchaud](https://github.com/jbranchaud/til) -[Simon Willison](https://til.simonwillison.net/) -[Jake Worth](https://github.com/jwworth/til) -[Hashrocket](https://til.hashrocket.com/) -[Thoughtbot](https://github.com/thoughtbot/til)
-
-## License
-
-© 2024 Natalie Sheils
-
-This repository use the MIT license. See `LICENSE` for details.
+  copied in the creation of this site.
+- [Sam Searles-Bryant](https://samueljsb.co.uk/til/) 
+- [Federico Marani](https://flagzeta.org/til/) 
+- [Josh Branchaud](https://github.com/jbranchaud/til) 
+- [Simon Willison](https://til.simonwillison.net/) 
+- [Jake Worth](https://github.com/jwworth/til) 
+- [Hashrocket](https://til.hashrocket.com/) 
+- [Thoughtbot](https://github.com/thoughtbot/til)
