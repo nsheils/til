@@ -9,7 +9,7 @@
         {{ printf `<link rel="shortcut icon" href="%s">` ("favicon.ico" | absURL) | safeHTML }}
 
         {{ if .IsHome }}
-            <link rel="alternate" type="application/rss+xml" href="/posts/index.xml" title="Today I Learnt...">
+            <link rel="alternate" type="application/rss+xml" href="/posts/index.xml" title="Today I learned...">
         {{ else }}
             {{ with .OutputFormats.Get "rss" }}
                 {{ printf `<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
@@ -30,7 +30,7 @@
             function gtag() {dataLayer.push(arguments); }
 
             // https://developers.google.com/analytics/devguides/collection/gtagjs/user-opt-out
-            window['ga-disable-G-4500T4RE03'] = location.hostname != "til.codeinthehole.com"
+            window['ga-disable-G-4500T4RE03'] = location.hostname != "nsheils.github.io/til";
             gtag('js', new Date());
             gtag('config', 'G-4500T4RE03');
         </script>
@@ -40,7 +40,7 @@
     <body>
         {{ block "header" . }}
             <header id="banner">
-                <h2><a href="{{ .Site.BaseURL }}">Today I Learnt&hellip;</a></h2>
+                <h2><a href="{{ .Site.BaseURL }}">Today I learned&hellip;</a></h2>
             </header>
         {{ end }}
 

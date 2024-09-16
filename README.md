@@ -1,6 +1,6 @@
-# Today I Learnt
+# Today I learned
 
-A Hugo-built static site of Today-I-Learnt (TIL) posts, designed to make it as
+A Hugo-built static site of Today-I-learned (TIL) posts, designed to make it as
 easy as possible to publish a new post.
 
 ## Scripts
