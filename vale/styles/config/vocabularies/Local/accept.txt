@@ -1,6 +1,5 @@
 # Tech jargon
 src
-Footgun
 quickfix
 png
 filepaths
@@ -33,29 +32,18 @@ Postgres
 Mypy
 
 # Applications
-Asana
-Trello
 Github
-Loggly
 Alexa
 Calendly
 
 # Names
-Magnus
-Carlsen
-Romain
-Lafourcade
-Tunnicliffe
-Maier
-Liskov
+Sheils
 
 # British
 onwards
 foodborne
 
 # Companies
-Hashicorp
 Hashrocket
 
 # Product names
-thermapen

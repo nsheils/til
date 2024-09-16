@@ -1,8 +1,11 @@
+# write-good
+
 Based on [write-good](https://github.com/btford/write-good).
 
 > Naive linter for English prose for developers who can't write good and wanna learn to do other stuff good too.
 
-```
+## License
+
 The MIT License (MIT)
 
 Copyright (c) 2014 Brian Ford
@@ -24,4 +27,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-```

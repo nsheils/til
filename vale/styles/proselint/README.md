@@ -1,3 +1,7 @@
+# Proselint
+
+The `proselint` style is a collection of rules that are based on the [proselint](http://proselint.com/) linter. The rules are designed to catch common writing issues and improve the quality of your writing.
+
 Copyright © 2014–2015, Jordan Suchow, Michael Pacer, and Lara A. Ross
 All rights reserved.
 

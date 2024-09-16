@@ -1,0 +1,7 @@
+[project]
+name = "til"
+dynamic = ["version"]
+
+[build-system]
+requires = ["setuptools>=64", "setuptools_scm>=8"]
+build-backend = "setuptools.build_meta"
