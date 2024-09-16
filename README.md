@@ -2,7 +2,7 @@
 
 ![Build and Deploy](https://img.shields.io/github/actions/workflow/status/nsheils/til/build-and-deploy.yml?logo=githubpages&link=https%3A%2F%2Fgithub.com%2Fnsheils%2Ftil%2Factions%2Fworkflows%2Fbuild-and-deploy.yml)
 ![License](https://img.shields.io/github/license/nsheils/til)
-![Website Up](https://nsheils.github.io/til/)
+![Website Up](https://img.shields.io/website?url=https%3A%2F%2Fnsheils.github.io%2Ftil%2F)
 ![Commit Activity](https://img.shields.io/github/commit-activity/m/nsheils/til?logo=github)
 
 A Hugo-built static site of Today-I-learned (TIL) posts, designed to make it as
