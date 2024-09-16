@@ -5,11 +5,11 @@ server:
 # site can be accessed from other devices on the network.
 export IPADDR := $(shell ifeq ($(OS),Windows_NT),$(shell ipconfig getifaddr en0),$(shell hostname -I | awk '{print $$1}'))
 network_server:
-	cd hugosite && hugo server --renderToMemory --bind $(IPADDR) --baseURL http://$(IPADDR)
+	cd hugosite && hugo server --renderToMemory --bind $(IPADDR) --baseURL http://$(IPADDR) --config hugo.toml
 
 build:
 	rm -rf docs
-	cd hugosite && hugo
+	cd hugosite && hugo --config hugo.toml
 
 lint: markdownlint prettier_lint vale
 
