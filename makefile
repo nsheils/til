@@ -3,7 +3,7 @@ server:
 
 # Run the server and bind to the IP address of the en0 interface so that the
 # site can be accessed from other devices on the network.
-export IPADDR := $(shell ipconfig getifaddr en0)
+export IPADDR := $(shell ifeq ($(OS),Windows_NT),$(shell ipconfig getifaddr en0),$(shell hostname -I | awk '{print $$1}'))
 network_server:
 	cd hugosite && hugo server --renderToMemory --bind $(IPADDR) --baseURL http://$(IPADDR)
 
