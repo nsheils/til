@@ -65,6 +65,9 @@ function publish() {
     # Rebuild the static site
     make build
 
+    # Run pre-commit hooks
+    pre-commit run --all-files
+
     # Commit the post file and any screenshots that might have been saved while writing this post.
     git add $filepath docs/ static/
     git commit -m "$title" > /dev/null 
