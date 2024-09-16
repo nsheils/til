@@ -77,6 +77,7 @@ e.g.
 ```sh
 til_screenshot Alfred preferences UI
 ```
+
 .
 
 This triggers macOS's `screencapture` utility to capture a selection of the
@@ -126,10 +127,10 @@ The theme for the site is a customized version of
 
 - [David Winterbottom](https://til.codeinthehole.com/) --The person I blatantly
   copied in the creation of this site.
-- [Sam Searles-Bryant](https://samueljsb.co.uk/til/) 
-- [Federico Marani](https://flagzeta.org/til/) 
-- [Josh Branchaud](https://github.com/jbranchaud/til) 
-- [Simon Willison](https://til.simonwillison.net/) 
-- [Jake Worth](https://github.com/jwworth/til) 
-- [Hashrocket](https://til.hashrocket.com/) 
+- [Sam Searles-Bryant](https://samueljsb.co.uk/til/)
+- [Federico Marani](https://flagzeta.org/til/)
+- [Josh Branchaud](https://github.com/jbranchaud/til)
+- [Simon Willison](https://til.simonwillison.net/)
+- [Jake Worth](https://github.com/jwworth/til)
+- [Hashrocket](https://til.hashrocket.com/)
 - [Thoughtbot](https://github.com/thoughtbot/til)
