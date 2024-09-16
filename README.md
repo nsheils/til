@@ -3,6 +3,9 @@
 A Hugo-built static site of Today-I-learned (TIL) posts, designed to make it as
 easy as possible to publish a new post.
 
+The creation of the site is based on
+[this til](https://github.com/codeinthehole/til).
+
 ## Scripts
 
 This repo provides two Bash scripts:
