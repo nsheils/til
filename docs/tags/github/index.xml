@@ -13,12 +13,12 @@
 
     
     <item>
-      <title>Cannot unfork in github</title>
+      <title>Cannot un-fork in github</title>
       <link>https://nsheils.github.io/til/posts/cannot-unfork-in-github/</link>
       <pubDate>Mon, 16 Sep 2024 01:12:19 -0500</pubDate>
       
       <guid>https://nsheils.github.io/til/posts/cannot-unfork-in-github/</guid>
-      <description>Although you cannot &amp;ldquo;unfork&amp;rdquo; a github repository, you can do so by cloning what you&amp;rsquo;ve got into a new repository then deleting the original which is linked back to the thing you no longer want to fork.
+      <description>Although you cannot &amp;ldquo;un-fork&amp;rdquo; a GitHub repository, you can do so by cloning what you&amp;rsquo;ve got into a new repository then deleting the original. This way, you&amp;rsquo;ve also removed the fork relationship.
 </description>
     </item>
     
