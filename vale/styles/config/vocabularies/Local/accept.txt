@@ -36,6 +36,7 @@ macOS
 Github
 Alexa
 Calendly
+plotly
 
 # Names
 Sheils

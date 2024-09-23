@@ -6,11 +6,21 @@
     <description>Python TILs - Natalie Sheils</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 23 Sep 2024 08:07:13 -0500</lastBuildDate>
+    <lastBuildDate>Mon, 23 Sep 2024 08:15:20 -0500</lastBuildDate>
     
 	<atom:link href="https://nsheils.github.io/til/tags/python/index.xml" rel="self" type="application/rss+xml" />
     
 
+    
+    <item>
+      <title>To create stacked and grouped bar charts</title>
+      <link>https://nsheils.github.io/til/posts/to-create-stacked-and-grouped-bar-charts/</link>
+      <pubDate>Mon, 23 Sep 2024 08:15:20 -0500</pubDate>
+      
+      <guid>https://nsheils.github.io/til/posts/to-create-stacked-and-grouped-bar-charts/</guid>
+      <description>I needed to create bar charts that were stacked (duh, this is the best kind) but I also wanted them grouped. This proved more difficult than I first expected. Example code as follows:
+</description>
+    </item>
     
     <item>
       <title>Adding a subtitle in plotly</title>
@@ -18,7 +28,7 @@
       <pubDate>Mon, 23 Sep 2024 08:07:13 -0500</pubDate>
       
       <guid>https://nsheils.github.io/til/posts/adding-a-subtitle-in-plotly/</guid>
-      <description>In plotly, there used to be no way to add a subtitle expliclity. However, now you can add a subtitle as part of the title dictionary. For example:
+      <description>In plotly, there used to be no way to add a subtitle explicitly. Now you can add a subtitle as part of the title dictionary. For example:
 </description>
     </item>
     
