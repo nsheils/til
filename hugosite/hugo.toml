@@ -4,7 +4,7 @@ baseURL = "https://nsheils.github.io/til/"
 languageCode = "en-us"
 title = "Today I Learned — Natalie Sheils"
 
-# Build static site to /docs folder so Github pages can serve it.
+# Build static site to /docs folder so GitHub pages can serve it.
 publishDir = "../docs"
              
 # Serve statics from above Hugosite root.

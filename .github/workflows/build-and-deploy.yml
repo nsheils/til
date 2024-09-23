@@ -13,7 +13,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Install Hugo
+      - name: Install Hugo Extended
         run: |
           sudo apt-get update
           sudo apt-get install -y hugo
