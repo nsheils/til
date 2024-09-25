@@ -70,7 +70,28 @@ query would be</p>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> colC <span style="color:#66d9ef">as</span> id,
 </span></span><span style="display:flex;"><span>ARRAY_AGG(JSON_OBJECT(<span style="color:#e6db74">&#39;mycolA&#39;</span>, colA, <span style="color:#e6db74">&#39;mycolB&#39;</span>, colB)) <span style="color:#66d9ef">AS</span> json_object
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> <span style="color:#f92672">`</span>my_project.my_table.this_cool_table<span style="color:#f92672">`</span>
-</span></span></code></pre></div></article>
+</span></span></code></pre></div><p>This should create a new table that looks like this:</p>
+<hr>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">id</th>
+          <th style="text-align: left">json_object</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">{&lsquo;mycolA&rsquo;: &lsquo;value1&rsquo;, &lsquo;mycolB&rsquo;: &lsquo;value2&rsquo;}</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">2</td>
+          <td style="text-align: left">{&lsquo;mycolA&rsquo;: &lsquo;value3&rsquo;, &lsquo;mycolB&rsquo;: &lsquo;value4&rsquo;}</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+</article>
 
         </main>
 

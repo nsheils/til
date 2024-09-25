@@ -28,7 +28,7 @@
       <pubDate>Mon, 23 Sep 2024 08:15:20 -0500</pubDate>
       
       <guid>https://nsheils.github.io/til/posts/to-create-stacked-and-grouped-bar-charts/</guid>
-      <description>I want to create bar charts that are stacked (duh, this is the best kind) but I also want them grouped. This proved more difficult than I first expected. Example code as follows:
+      <description>I want to create stacked bar charts (duh, this is the best kind), but I also want them grouped. This proved more difficult than I first expected. Example code as follows:
 </description>
     </item>
     

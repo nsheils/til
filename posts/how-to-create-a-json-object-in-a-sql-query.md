@@ -18,3 +18,14 @@ ARRAY_AGG(JSON_OBJECT('mycolA', colA, 'mycolB', colB)) AS json_object
 FROM `my_project.my_table.this_cool_table`
 
 ```
+
+This should create a new table that looks like this:
+
+---
+
+| id  | json_object                              |
+| --- | ---------------------------------------- |
+| 1   | {'mycolA': 'value1', 'mycolB': 'value2'} |
+| 2   | {'mycolA': 'value3', 'mycolB': 'value4'} |
+
+---
