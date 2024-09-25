@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+      <title>SQL - Today I Learned — Natalie Sheils</title>
+    <link>https://nsheils.github.io/til/tags/sql/</link>
+    <description>SQL TILs - Natalie Sheils</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 25 Sep 2024 09:55:07 -0500</lastBuildDate>
+    
+	<atom:link href="https://nsheils.github.io/til/tags/sql/index.xml" rel="self" type="application/rss+xml" />
+    
+
+    
+    <item>
+      <title>How to create a json object in a SQL query</title>
+      <link>https://nsheils.github.io/til/posts/how-to-create-a-json-object-in-a-sql-query/</link>
+      <pubDate>Wed, 25 Sep 2024 09:55:07 -0500</pubDate>
+      
+      <guid>https://nsheils.github.io/til/posts/how-to-create-a-json-object-in-a-sql-query/</guid>
+      <description>It&amp;rsquo;s possible to create JSON objects from a table in SQL. For example, given a table with columns colA, colB, colC if I wanted to create a new table with columns id and json_object where the values in the json_object column were {&#39;mycolA&#39;: value_from_colA, &#39;mycolB&#39;: value_from_colB} the appropriate SQL query would be
+</description>
+    </item>
+    
+
+  </channel>
+</rss>

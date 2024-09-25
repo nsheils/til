@@ -5,8 +5,8 @@ tags: [plotly, python]
 summary: ""
 ---
 
-I needed to create bar charts that were stacked (duh, this is the best kind) but
-I also wanted them grouped. This proved more difficult than I first expected.
+I want to create bar charts that are stacked (duh, this is the best kind) but I
+also want them grouped. This proved more difficult than I first expected.
 Example code as follows:
 
 ```python
