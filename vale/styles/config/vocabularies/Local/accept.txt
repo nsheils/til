@@ -29,9 +29,11 @@ systemd
 pytz
 BuildKit
 Postgres
+pydantic
 Mypy
 macOS
 json_object
+datetime
 
 # Applications
 Github

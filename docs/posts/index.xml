@@ -13,12 +13,12 @@
 
     
     <item>
-      <title>Pydantic models for datetime can be really detailed</title>
-      <link>https://nsheils.github.io/til/posts/pydantic-models-for-datetime-can-be-really-detailed/</link>
+      <title>Pydantic models for datetime can be detailed</title>
+      <link>https://nsheils.github.io/til/posts/pydantic-models-for-datetime-can-be-detailed/</link>
       <pubDate>Wed, 09 Oct 2024 16:42:53 -0500</pubDate>
       
-      <guid>https://nsheils.github.io/til/posts/pydantic-models-for-datetime-can-be-really-detailed/</guid>
-      <description>I&amp;rsquo;m very into pydantic models. They&amp;rsquo;ve helped me catch so many errors before my code is pushed. For datetime objects, pydantic can be very specific. The one that is most useful to me is transaction_datetime_utc: AwareDatetime which makes sure a timezone is specified.
+      <guid>https://nsheils.github.io/til/posts/pydantic-models-for-datetime-can-be-detailed/</guid>
+      <description>I&amp;rsquo;m super into pydantic models. They&amp;rsquo;ve helped me catch a lot of errors before I commit code. For datetime objects, pydantic can be specific. The one that is most useful to me is transaction_datetime_utc: AwareDatetime which makes sure that the object has a specified timezone.
 </description>
     </item>
     
