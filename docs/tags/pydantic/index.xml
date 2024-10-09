@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+      <title>Pydantic - Today I Learned — Natalie Sheils</title>
+    <link>https://nsheils.github.io/til/tags/pydantic/</link>
+    <description>Pydantic TILs - Natalie Sheils</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 09 Oct 2024 16:42:53 -0500</lastBuildDate>
+    
+	<atom:link href="https://nsheils.github.io/til/tags/pydantic/index.xml" rel="self" type="application/rss+xml" />
+    
+
+    
+    <item>
+      <title>Pydantic models for datetime can be really detailed</title>
+      <link>https://nsheils.github.io/til/posts/pydantic-models-for-datetime-can-be-really-detailed/</link>
+      <pubDate>Wed, 09 Oct 2024 16:42:53 -0500</pubDate>
+      
+      <guid>https://nsheils.github.io/til/posts/pydantic-models-for-datetime-can-be-really-detailed/</guid>
+      <description>I&amp;rsquo;m very into pydantic models. They&amp;rsquo;ve helped me catch so many errors before my code is pushed. For datetime objects, pydantic can be very specific. The one that is most useful to me is transaction_datetime_utc: AwareDatetime which makes sure a timezone is specified.
+</description>
+    </item>
+    
+
+  </channel>
+</rss>
