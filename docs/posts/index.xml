@@ -6,11 +6,21 @@
     <description>All TILs - Natalie Sheils</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 09 Oct 2024 16:42:53 -0500</lastBuildDate>
+    <lastBuildDate>Wed, 06 Nov 2024 07:58:10 -0600</lastBuildDate>
     
 	<atom:link href="https://nsheils.github.io/til/posts/index.xml" rel="self" type="application/rss+xml" />
     
 
+    
+    <item>
+      <title>Why tuples are better than lists in python</title>
+      <link>https://nsheils.github.io/til/posts/why-tuples-are-better-than-lists-in-python/</link>
+      <pubDate>Wed, 06 Nov 2024 07:58:10 -0600</pubDate>
+      
+      <guid>https://nsheils.github.io/til/posts/why-tuples-are-better-than-lists-in-python/</guid>
+      <description>Immutable objects (tuples, collections) should be used in place of mutable ones (lists) in Python. In addition to better logic (since they won&amp;rsquo;t change on you in the rest of the code) they are way speedier.
+</description>
+    </item>
     
     <item>
       <title>Pydantic models for datetime can be detailed</title>
