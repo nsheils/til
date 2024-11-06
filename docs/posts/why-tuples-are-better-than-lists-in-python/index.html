@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <meta name="description" content="
-    Immutable objects (tuples, collections) should be used in place of mutable ones (lists) in Python. In addition to better logic (since they won&rsquo;t change on you in the rest of the code) they are way speedier.
+    Use immutable objects (tuples, collections) in place of mutable ones (lists) in Python. They provide better logic (since they won&rsquo;t change on you in the rest of the code) and are way speedier.
 ">
 
         <link rel="shortcut icon" href="https://nsheils.github.io/til/favicon.ico">
@@ -20,7 +20,9 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://nsheils.github.io/til/posts/why-tuples-are-better-than-lists-in-python/" />
 <meta property="og:title" content="TIL Why tuples are better than lists in python — Natalie Sheils" />
-<meta property="og:description" content="Immutable objects (tuples, collections) should be used in place of mutable ones (lists) in Python. In addition to better logic (since they won&rsquo;t change on you in the rest of the code) they are way speedier. — can be read in 1 minute" />
+<meta property="og:description" content="Use immutable objects (tuples, collections) in place of mutable ones (lists) in
+Python. They provide better logic (since they won&rsquo;t change on you in the rest of
+the code) and are way speedier. — can be read in 1 minute" />
 
 
 
@@ -57,8 +59,12 @@
                 On <time>November 6, 2024</time>, <a href="https://nsheils.github.io" title="that is, Natalie Sheils">I</a> learned ...
             </div>
             <h1>Why tuples are better than lists in python</h1>
-        </header><p>Immutable objects (tuples, collections) should be used in place of mutable ones (lists) in Python. In addition to better logic (since they won&rsquo;t change on you in the rest of the code) they are <em>way</em> speedier.</p>
-<p>Python lists are basically an arraylist with each node referencing the actual object instead of encapsulating it. So iteration on the object requires a bunch more jumping around in memory.</p>
+        </header><p>Use immutable objects (tuples, collections) in place of mutable ones (lists) in
+Python. They provide better logic (since they won&rsquo;t change on you in the rest of
+the code) and are <em>way</em> speedier.</p>
+<p>Python lists are basically an arraylist with each node referencing the actual
+object instead of encapsulating it. So iteration on the object requires a bunch
+more jumping around in memory.</p>
 <p>Check out the following toy example:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ python -m timeit <span style="color:#e6db74">&#34;x=(1,2,3,4)+(5,6,7,8)&#34;</span>
 </span></span><span style="display:flex;"><span><span style="color:#ae81ff">50000000</span> loops, best of 5: 6.44 nsec per loop

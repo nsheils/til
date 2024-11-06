@@ -34,6 +34,7 @@ Mypy
 macOS
 json_object
 datetime
+arraylist
 
 # Applications
 Github

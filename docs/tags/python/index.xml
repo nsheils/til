@@ -18,7 +18,7 @@
       <pubDate>Wed, 06 Nov 2024 07:58:10 -0600</pubDate>
       
       <guid>https://nsheils.github.io/til/posts/why-tuples-are-better-than-lists-in-python/</guid>
-      <description>Immutable objects (tuples, collections) should be used in place of mutable ones (lists) in Python. In addition to better logic (since they won&amp;rsquo;t change on you in the rest of the code) they are way speedier.
+      <description>Use immutable objects (tuples, collections) in place of mutable ones (lists) in Python. They provide better logic (since they won&amp;rsquo;t change on you in the rest of the code) and are way speedier.
 </description>
     </item>
     
