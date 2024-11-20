@@ -20,7 +20,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://nsheils.github.io/til/posts/how-to-create-a-tuple-when-i-would-have-made-a-list/" />
 <meta property="og:title" content="TIL How to create a tuple when i would have made a list — Natalie Sheils" />
-<meta property="og:description" content="When creating tuples of elements you can use the same syntax as lists, only with ()s instead of []s. e.g. (1, 2, 3) instead of [1, 2, 3]. tuple([1, 2, 3]) creates a list, then builds a tuple out of the elements in that list and discards the list, which is a bunch of extra wasteful work. This includes empty tuples empty_tuple = (). — can be read in 1 minute" />
+<meta property="og:description" content="When creating tuples of elements you can use the same syntax as lists, only with
+()s instead of []s. e.g. (1, 2, 3) instead of [1, 2, 3].
+tuple([1, 2, 3]) creates a list, then builds a tuple out of the elements in
+that list and discards the list, which is a bunch of extra wasteful work. This
+includes empty tuples empty_tuple = (). — can be read in 1 minute" />
 
 
 
@@ -57,15 +61,23 @@
                 On <time>November 20, 2024</time>, <a href="https://nsheils.github.io" title="that is, Natalie Sheils">I</a> learned ...
             </div>
             <h1>How to create a tuple when i would have made a list</h1>
-        </header><p>When creating tuples of elements you can use the same syntax as lists, only with <code>()</code>s instead of <code>[]</code>s. e.g. <code>(1, 2, 3)</code> instead of <code>[1, 2, 3]</code>. <code>tuple([1, 2, 3])</code> creates a list, then builds a tuple out of the elements in that list and discards the list, which is a bunch of extra wasteful work. This includes empty tuples <code>empty_tuple = ()</code>.</p>
-<p>The one confusing caveat to this is tuple comprehension. Whereas for a list you can do <code>[x * 2 for x in range(5)]</code> to build the list <code>[0, 2, 4, 6, 8]</code>, if you used parenthesis it doesn&rsquo;t make a tuple, but a lazy-evaluated generator, which is typically not want. So that&rsquo;s the case where you would use <code>tuple(x * 2 for x in range(5))</code>.</p>
-<pre tabindex="0"><code>&gt;&gt;&gt; [x * 2 for x in range(5)]
-[0, 2, 4, 6, 8]
-&gt;&gt;&gt; tuple(x * 2 for x in range(5))
-(0, 2, 4, 6, 8)
-&gt;&gt;&gt; (x * 2 for x in range(5))
-&lt;generator object &lt;genexpr&gt; at 0x7fc41fbff9f0&gt;
-</code></pre></article>
+        </header><p>When creating tuples of elements you can use the same syntax as lists, only with
+<code>()</code>s instead of <code>[]</code>s. e.g. <code>(1, 2, 3)</code> instead of <code>[1, 2, 3]</code>.
+<code>tuple([1, 2, 3])</code> creates a list, then builds a tuple out of the elements in
+that list and discards the list, which is a bunch of extra wasteful work. This
+includes empty tuples <code>empty_tuple = ()</code>.</p>
+<p>The one confusing caveat to this is tuple comprehension. Whereas for a list you
+can do <code>[x * 2 for x in range(5)]</code> to build the list <code>[0, 2, 4, 6, 8]</code>, if you
+used parenthesis it doesn&rsquo;t make a tuple, but a lazy-evaluated generator, which
+is typically not want. So that&rsquo;s the case where you would use
+<code>tuple(x * 2 for x in range(5))</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> [x <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span> <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">5</span>)]
+</span></span><span style="display:flex;"><span>[<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">8</span>]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> tuple(x <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span> <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">5</span>))
+</span></span><span style="display:flex;"><span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">8</span>)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> (x <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span> <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">5</span>))
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;</span>generator object <span style="color:#f92672">&lt;</span>genexpr<span style="color:#f92672">&gt;</span> at <span style="color:#ae81ff">0x7fc41fbff9f0</span><span style="color:#f92672">&gt;</span>
+</span></span></code></pre></div></article>
 
         </main>
 
@@ -120,9 +132,9 @@
         <hr color="#eee"/>
 
         
-            <p>⌨️ Jump to the previous TIL using the ◀️ cursor key.</p>
         
         
+            <p>⌨️ Jump to the previous/next TIL using the ◀️ or ▶️ cursor keys.</p>
         
     </footer>
 
@@ -134,6 +146,8 @@
             Mousetrap.bind("left", function() { window.location.replace("\/til\/posts\/why-tuples-are-better-than-lists-in-python\/"); })
         
 
+        
+            Mousetrap.bind("right", function() { window.location.replace("\/til\/posts\/how-to-use-graphite-to-manage-stacks-of-prs-better\/"); })
         
     </script>
 

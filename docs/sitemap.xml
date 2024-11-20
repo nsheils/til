@@ -2,19 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://nsheils.github.io/til/tags/git/</loc>
+    <lastmod>2024-11-20T08:06:14-06:00</lastmod>
+  </url><url>
+    <loc>https://nsheils.github.io/til/tags/graphite/</loc>
+    <lastmod>2024-11-20T08:06:14-06:00</lastmod>
+  </url><url>
+    <loc>https://nsheils.github.io/til/posts/how-to-use-graphite-to-manage-stacks-of-prs-better/</loc>
+    <lastmod>2024-11-20T08:06:14-06:00</lastmod>
+  </url><url>
+    <loc>https://nsheils.github.io/til/posts/</loc>
+    <lastmod>2024-11-20T08:06:14-06:00</lastmod>
+  </url><url>
+    <loc>https://nsheils.github.io/til/tags/</loc>
+    <lastmod>2024-11-20T08:06:14-06:00</lastmod>
+  </url><url>
+    <loc>https://nsheils.github.io/til/</loc>
+    <lastmod>2024-11-20T08:06:14-06:00</lastmod>
+  </url><url>
     <loc>https://nsheils.github.io/til/posts/how-to-create-a-tuple-when-i-would-have-made-a-list/</loc>
     <lastmod>2024-11-20T08:02:16-06:00</lastmod>
   </url><url>
-    <loc>https://nsheils.github.io/til/posts/</loc>
-    <lastmod>2024-11-20T08:02:16-06:00</lastmod>
-  </url><url>
     <loc>https://nsheils.github.io/til/tags/python/</loc>
-    <lastmod>2024-11-20T08:02:16-06:00</lastmod>
-  </url><url>
-    <loc>https://nsheils.github.io/til/tags/</loc>
-    <lastmod>2024-11-20T08:02:16-06:00</lastmod>
-  </url><url>
-    <loc>https://nsheils.github.io/til/</loc>
     <lastmod>2024-11-20T08:02:16-06:00</lastmod>
   </url><url>
     <loc>https://nsheils.github.io/til/posts/why-tuples-are-better-than-lists-in-python/</loc>
