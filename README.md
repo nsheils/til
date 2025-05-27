@@ -30,10 +30,12 @@ source /path/to/repo/install.sh
 
 Consider adding this snippet to your Bash start-up script.
 
-We use [Homebrew](https://brew.sh/) to install Hugo and other dependencies.
+Run the following to install all required tools (Hugo, just, markdownlint,
+prettier, vale, pre-commit):
 
 ```sh
 brew bundle --file=Brewfile
+./install.sh
 ```
 
 ## Usage
@@ -87,6 +89,45 @@ in the post are added to the system clipboard.
 
 After saving and exiting Vim, the Markdown file and any new images are
 automatically committed to the repo and published to GitHub Pages.
+
+## Common Tasks with just
+
+- **Build the site:**
+
+  ```sh
+  just build
+  ```
+
+  This will remove the `docs/` directory and rebuild the static site using Hugo.
+
+- **Serve the site locally:**
+
+  ```sh
+  just server
+  ```
+
+  This will start the Hugo development server.
+
+- **Serve the site on your local network:**
+
+  ```sh
+  just network-server
+  ```
+
+  This will bind the server to your local IP address so you can view it from
+  other devices.
+
+- **Lint your markdown and prose:**
+
+  ```sh
+  just lint
+  ```
+
+- **Auto-fix markdown and formatting issues:**
+
+  ```sh
+  just fix
+  ```
 
 ## Linting and fixing
 

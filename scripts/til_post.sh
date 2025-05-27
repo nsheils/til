@@ -63,7 +63,7 @@ function publish() {
     local title="$2"
 
     # Rebuild the static site
-    make build
+    just build
 
     # Run pre-commit hooks
     pre-commit run --all-files

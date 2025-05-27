@@ -61,95 +61,95 @@ The following script works well to set what makes sense for me. — can be read 
             <h1>How to set sensible defaults for github</h1>
         </header><p>I finally got around to setting some sensible defaults to personalize GitHub.
 The following script works well to set what makes sense for me.</p>
-<pre tabindex="0"><code>script_path = &#34;/mnt/data/setup_git_config.sh&#34;
-new_script_content = textwrap.dedent(&#34;&#34;&#34;\
-    #!/usr/bin/env bash
-    # ----------------------------------------------------------
-    # Git personal bootstrap script
-    # Sets Natalie Sheils’s preferred global Git configuration.
-    # Run once:  bash setup_git_config.sh
-    # ----------------------------------------------------------
-    set -e
-    
-    echo &#34;Applying global Git configuration...&#34;
-    
-    # ----------------------------------------------------------
-    # Core identity &amp; defaults
-    # ----------------------------------------------------------
-    git config --global core.editor &#34;vim&#34;
-    git config --global init.defaultBranch main
-    git config --global user.name &#34;nsheils&#34;
-    git config --global user.email &#34;natalie.sheils@gmail.com&#34;
-    
-    # ----------------------------------------------------------
-    # History &amp; pull behavior
-    # ----------------------------------------------------------
-    git config --global pull.rebase true
-    git config --global rebase.autoStash true
-    git config --global fetch.prune true
-    
-    # ----------------------------------------------------------
-    # Push ergonomics
-    # ----------------------------------------------------------
-    git config --global push.autoSetupRemote true
-    git config --global push.default current
-    git config --global remote.pushDefault origin
-    git config --global push.ff only
-    
-    # ----------------------------------------------------------
-    # Diff &amp; merge clarity
-    # ----------------------------------------------------------
-    git config --global merge.conflictStyle diff3
-    git config --global diff.colorMoved zebra
-    
-    # ----------------------------------------------------------
-    # Safety nets
-    # ----------------------------------------------------------
-    git config --global rerere.enabled true
-    
-    # ----------------------------------------------------------
-    # UI niceties
-    # ----------------------------------------------------------
-    git config --global status.showStash true
-    
-    # ----------------------------------------------------------
-    # Helpful aliases
-    # ----------------------------------------------------------
-    git config --global alias.st &#34;status&#34;
-    
-    # -----------------------------------------------------------------
-    # Alias: git new &lt;slug&gt;
-    #
-    # Quickly create and switch to a branch that follows your naming
-    # convention:    &lt;user&gt;_&lt;MM_DD&gt;_&lt;slug&gt;
-    #
-    #   * &lt;user&gt;  : your git user.name with spaces replaced by underscores
-    #   * &lt;MM_DD&gt; : current month &amp; day (e.g., 05_26)
-    #   * &lt;slug&gt;  : whatever you pass to `git new`, automatically lower‑cased
-    #               and spaces changed to dashes.
-    #
-    # Example:
-    #   $ git new “analytics endpoint”
-    #   # on May 26 the branch becomes:
-    #   #   nsheils_05_26_analytics-endpoint
-    #
-    # First push will create the upstream automatically because we set
-    #   push.autoSetupRemote=true        (see above)
-    # -----------------------------------------------------------------
-    git config --global alias.new &#39;!f() { \
-        user=$(git config user.name | tr &#34;[:space:]&#34; _); \
-        stamp=$(date +%m_%d); \
-        raw=$(echo &#34;$1&#34; | tr &#34;[:upper:]&#34; &#34;[:lower:]&#34; | sed -e &#34;s/[[:space:]]\\+/-/g&#34;); \
-        git switch -c &#34;${user}_${stamp}_${raw}&#34;; \
-    }; f&#39;
-
-
-    echo &#34;All done! Global Git configuration updated.&#34;
-    &#34;&#34;&#34;)
-with open(script_path, &#34;w&#34;) as f:
-    f.write(new_script_content)
-os.chmod(script_path, stat.S_IRWXU | stat.S_IRGRP | stat.S_IROTH)
-</code></pre></article>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>script_path <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/mnt/data/setup_git_config.sh&#34;</span>
+</span></span><span style="display:flex;"><span>new_script_content <span style="color:#f92672">=</span> textwrap.dedent<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;&#34;&#34;\
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    #!/usr/bin/env bash
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    # ----------------------------------------------------------
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    # Git personal bootstrap script
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    # Sets Natalie Sheils’s preferred global Git configuration.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    # Run once:  bash setup_git_config.sh
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    # ----------------------------------------------------------
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    set -e
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    echo &#34;</span>Applying global Git configuration...<span style="color:#e6db74">&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    # ----------------------------------------------------------
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    # Core identity &amp; defaults
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    # ----------------------------------------------------------
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    git config --global core.editor &#34;</span>vim<span style="color:#e6db74">&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    git config --global init.defaultBranch main
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    git config --global user.name &#34;</span>nsheils<span style="color:#e6db74">&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    git config --global user.email &#34;</span>natalie.sheils@gmail.com<span style="color:#e6db74">&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    # ----------------------------------------------------------
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    # History &amp; pull behavior
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    # ----------------------------------------------------------
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    git config --global pull.rebase true
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    git config --global rebase.autoStash true
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    git config --global fetch.prune true
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    # ----------------------------------------------------------
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    # Push ergonomics
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    # ----------------------------------------------------------
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    git config --global push.autoSetupRemote true
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    git config --global push.default current
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    git config --global remote.pushDefault origin
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    git config --global push.ff only
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    # ----------------------------------------------------------
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    # Diff &amp; merge clarity
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    # ----------------------------------------------------------
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    git config --global merge.conflictStyle diff3
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    git config --global diff.colorMoved zebra
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    # ----------------------------------------------------------
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    # Safety nets
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    # ----------------------------------------------------------
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    git config --global rerere.enabled true
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    # ----------------------------------------------------------
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    # UI niceties
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    # ----------------------------------------------------------
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    git config --global status.showStash true
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    # ----------------------------------------------------------
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    # Helpful aliases
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    # ----------------------------------------------------------
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    git config --global alias.st &#34;</span>status<span style="color:#e6db74">&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    # -----------------------------------------------------------------
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    # Alias: git new &lt;slug&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    #
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    # Quickly create and switch to a branch that follows your naming
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    # convention:    &lt;user&gt;_&lt;MM_DD&gt;_&lt;slug&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    #
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    #   * &lt;user&gt;  : your git user.name with spaces replaced by underscores
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    #   * &lt;MM_DD&gt; : current month &amp; day (e.g., 05_26)
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    #   * &lt;slug&gt;  : whatever you pass to `git new`, automatically lower‑cased
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    #               and spaces changed to dashes.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    #
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    # Example:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    #   </span>$<span style="color:#e6db74"> git new “analytics endpoint”
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    #   # on May 26 the branch becomes:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    #   #   nsheils_05_26_analytics-endpoint
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    #
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    # First push will create the upstream automatically because we set
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    #   push.autoSetupRemote=true        (see above)
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    # -----------------------------------------------------------------
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    git config --global alias.new &#39;!f() { \
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        user=</span><span style="color:#66d9ef">$(</span>git config user.name | tr <span style="color:#e6db74">&#34;[:space:]&#34;</span> _<span style="color:#66d9ef">)</span><span style="color:#e6db74">; \
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        stamp=</span><span style="color:#66d9ef">$(</span>date +%m_%d<span style="color:#66d9ef">)</span><span style="color:#e6db74">; \
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        raw=</span><span style="color:#66d9ef">$(</span>echo <span style="color:#e6db74">&#34;</span>$1<span style="color:#e6db74">&#34;</span> | tr <span style="color:#e6db74">&#34;[:upper:]&#34;</span> <span style="color:#e6db74">&#34;[:lower:]&#34;</span> | sed -e <span style="color:#e6db74">&#34;s/[[:space:]]\\+/-/g&#34;</span><span style="color:#66d9ef">)</span><span style="color:#e6db74">; \
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        git switch -c &#34;</span><span style="color:#e6db74">${</span>user<span style="color:#e6db74">}</span>_<span style="color:#e6db74">${</span>stamp<span style="color:#e6db74">}</span>_<span style="color:#e6db74">${</span>raw<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;; \
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    }; f&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    echo &#34;</span>All <span style="color:#66d9ef">done</span>! Global Git configuration updated.<span style="color:#e6db74">&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;&#34;&#34;</span><span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>with open<span style="color:#f92672">(</span>script_path, <span style="color:#e6db74">&#34;w&#34;</span><span style="color:#f92672">)</span> as f:
+</span></span><span style="display:flex;"><span>    f.write<span style="color:#f92672">(</span>new_script_content<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>os.chmod<span style="color:#f92672">(</span>script_path, stat.S_IRWXU | stat.S_IRGRP | stat.S_IROTH<span style="color:#f92672">)</span>
+</span></span></code></pre></div></article>
 
         </main>
 

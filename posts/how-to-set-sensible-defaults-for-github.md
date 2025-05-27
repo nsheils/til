@@ -8,7 +8,7 @@ summary: ""
 I finally got around to setting some sensible defaults to personalize GitHub.
 The following script works well to set what makes sense for me.
 
-```
+```bash
 script_path = "/mnt/data/setup_git_config.sh"
 new_script_content = textwrap.dedent("""\
     #!/usr/bin/env bash
@@ -18,9 +18,9 @@ new_script_content = textwrap.dedent("""\
     # Run once:  bash setup_git_config.sh
     # ----------------------------------------------------------
     set -e
-    
+
     echo "Applying global Git configuration..."
-    
+
     # ----------------------------------------------------------
     # Core identity & defaults
     # ----------------------------------------------------------
@@ -28,14 +28,14 @@ new_script_content = textwrap.dedent("""\
     git config --global init.defaultBranch main
     git config --global user.name "nsheils"
     git config --global user.email "natalie.sheils@gmail.com"
-    
+
     # ----------------------------------------------------------
     # History & pull behavior
     # ----------------------------------------------------------
     git config --global pull.rebase true
     git config --global rebase.autoStash true
     git config --global fetch.prune true
-    
+
     # ----------------------------------------------------------
     # Push ergonomics
     # ----------------------------------------------------------
@@ -43,28 +43,28 @@ new_script_content = textwrap.dedent("""\
     git config --global push.default current
     git config --global remote.pushDefault origin
     git config --global push.ff only
-    
+
     # ----------------------------------------------------------
     # Diff & merge clarity
     # ----------------------------------------------------------
     git config --global merge.conflictStyle diff3
     git config --global diff.colorMoved zebra
-    
+
     # ----------------------------------------------------------
     # Safety nets
     # ----------------------------------------------------------
     git config --global rerere.enabled true
-    
+
     # ----------------------------------------------------------
     # UI niceties
     # ----------------------------------------------------------
     git config --global status.showStash true
-    
+
     # ----------------------------------------------------------
     # Helpful aliases
     # ----------------------------------------------------------
     git config --global alias.st "status"
-    
+
     # -----------------------------------------------------------------
     # Alias: git new <slug>
     #
@@ -99,4 +99,3 @@ with open(script_path, "w") as f:
 os.chmod(script_path, stat.S_IRWXU | stat.S_IRGRP | stat.S_IROTH)
 
 ```
-
