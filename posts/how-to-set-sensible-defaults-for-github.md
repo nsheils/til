@@ -1,7 +1,7 @@
 ---
 title: "How to set sensible defaults for github"
 date: "2025-05-26T20:41:46-0500"
-tags: [github]
+tags: [github, git]
 summary: ""
 ---
 
