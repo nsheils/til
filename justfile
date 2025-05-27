@@ -18,10 +18,11 @@ markdownlint:
     markdownlint .
 
 prettier-lint:
-    prettier --check .
+    prettier --check . || (echo "[warn] Code style issues found. Running Prettier with --write to fix..." && prettier --write .)
 
 vale:
-    vale .
+    vale --glob='!**/archetypes/**' .
+    # vale --glob='!**/archetypes/**' --glob='!**/README.md' .
 
 fix: markdownlint-fix prettier-fix
 

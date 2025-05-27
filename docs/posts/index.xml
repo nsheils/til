@@ -18,7 +18,7 @@
       <pubDate>Mon, 26 May 2025 20:41:46 -0500</pubDate>
       
       <guid>https://nsheils.github.io/til/posts/how-to-set-sensible-defaults-for-github/</guid>
-      <description>I finally got around to setting some sensible defaults to personalize GitHub. The following script works well to set what makes sense for me.
+      <description>I got around to setting some sensible defaults to personalize GitHub. The following script works well to set what makes sense for me.
 </description>
     </item>
     
@@ -38,7 +38,7 @@
       <pubDate>Wed, 20 Nov 2024 08:02:16 -0600</pubDate>
       
       <guid>https://nsheils.github.io/til/posts/how-to-create-a-tuple-when-i-would-have-made-a-list/</guid>
-      <description>When creating tuples of elements you can use the same syntax as lists, only with ()s instead of []s. e.g. (1, 2, 3) instead of [1, 2, 3]. tuple([1, 2, 3]) creates a list, then builds a tuple out of the elements in that list and discards the list, which is a bunch of extra wasteful work. This includes empty tuples empty_tuple = ().
+      <description>When creating tuples of elements you can use the same syntax as lists, except with ()s instead of []s. e.g. (1, 2, 3) instead of [1, 2, 3]. tuple([1, 2, 3]) creates a list, then builds a tuple out of the elements in that list and discards the list, which is a bunch of extra wasteful work. This includes empty tuples empty_tuple = ().
 </description>
     </item>
     
@@ -53,7 +53,7 @@
     </item>
     
     <item>
-      <title>Pydantic models for datetime can be detailed</title>
+      <title>Pydantic models for datetime can provide details</title>
       <link>https://nsheils.github.io/til/posts/pydantic-models-for-datetime-can-be-detailed/</link>
       <pubDate>Wed, 09 Oct 2024 16:42:53 -0500</pubDate>
       

@@ -1,5 +1,5 @@
 ---
-title: "Pydantic models for datetime can be detailed"
+title: "Pydantic models for datetime can provide details"
 date: "2024-10-09T16:42:53-0500"
 tags: [python, pydantic]
 summary: ""

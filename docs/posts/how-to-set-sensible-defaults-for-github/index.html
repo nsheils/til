@@ -5,8 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <meta name="description" content="
-    I finally got around to setting some sensible defaults to personalize GitHub.
-The following script works well to set what makes sense for me.
+    I got around to setting some sensible defaults to personalize GitHub. The
+following script works well to set what makes sense for me.
 ">
 
         <link rel="shortcut icon" href="https://nsheils.github.io/til/favicon.ico">
@@ -21,8 +21,8 @@ The following script works well to set what makes sense for me.
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://nsheils.github.io/til/posts/how-to-set-sensible-defaults-for-github/" />
 <meta property="og:title" content="TIL How to set sensible defaults for github — Natalie Sheils" />
-<meta property="og:description" content="I finally got around to setting some sensible defaults to personalize GitHub.
-The following script works well to set what makes sense for me. — can be read in 2 minutes" />
+<meta property="og:description" content="I got around to setting some sensible defaults to personalize GitHub. The
+following script works well to set what makes sense for me. — can be read in 2 minutes" />
 
 
 
@@ -59,14 +59,14 @@ The following script works well to set what makes sense for me. — can be read 
                 On <time>May 26, 2025</time>, <a href="https://nsheils.github.io" title="that is, Natalie Sheils">I</a> learned ...
             </div>
             <h1>How to set sensible defaults for github</h1>
-        </header><p>I finally got around to setting some sensible defaults to personalize GitHub.
-The following script works well to set what makes sense for me.</p>
+        </header><p>I got around to setting some sensible defaults to personalize GitHub. The
+following script works well to set what makes sense for me.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>script_path <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/mnt/data/setup_git_config.sh&#34;</span>
 </span></span><span style="display:flex;"><span>new_script_content <span style="color:#f92672">=</span> textwrap.dedent<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;&#34;&#34;\
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    #!/usr/bin/env bash
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    # ----------------------------------------------------------
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    # Git personal bootstrap script
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    # Sets Natalie Sheils’s preferred global Git configuration.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    # Sets Natalie Sheils&#39;s preferred global Git configuration.
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    # Run once:  bash setup_git_config.sh
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    # ----------------------------------------------------------
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    set -e
@@ -129,7 +129,7 @@ The following script works well to set what makes sense for me.</p>
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    #               and spaces changed to dashes.
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    #
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    # Example:
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    #   </span>$<span style="color:#e6db74"> git new “analytics endpoint”
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    #   </span>$<span style="color:#e6db74"> git new &#34;</span>analytics endpoint<span style="color:#e6db74">&#34;
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    #   # on May 26 the branch becomes:
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    #   #   nsheils_05_26_analytics-endpoint
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    #

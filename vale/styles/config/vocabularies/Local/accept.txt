@@ -3,8 +3,10 @@ src
 quickfix
 png
 filepaths
+json
 config
 kwarg
+markdownlint
 superset
 ing
 rebase
@@ -21,6 +23,7 @@ pastable
 subfolder
 filetype
 slugified
+slugifying
 
 # Software
 ripgrep

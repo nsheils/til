@@ -5,8 +5,8 @@ tags: [github, git]
 summary: ""
 ---
 
-I finally got around to setting some sensible defaults to personalize GitHub.
-The following script works well to set what makes sense for me.
+I got around to setting some sensible defaults to personalize GitHub. The
+following script works well to set what makes sense for me.
 
 ```bash
 script_path = "/mnt/data/setup_git_config.sh"
@@ -14,7 +14,7 @@ new_script_content = textwrap.dedent("""\
     #!/usr/bin/env bash
     # ----------------------------------------------------------
     # Git personal bootstrap script
-    # Sets Natalie Sheils’s preferred global Git configuration.
+    # Sets Natalie Sheils's preferred global Git configuration.
     # Run once:  bash setup_git_config.sh
     # ----------------------------------------------------------
     set -e
@@ -77,7 +77,7 @@ new_script_content = textwrap.dedent("""\
     #               and spaces changed to dashes.
     #
     # Example:
-    #   $ git new “analytics endpoint”
+    #   $ git new "analytics endpoint"
     #   # on May 26 the branch becomes:
     #   #   nsheils_05_26_analytics-endpoint
     #

@@ -5,8 +5,8 @@ tags: [python]
 summary: ""
 ---
 
-When creating tuples of elements you can use the same syntax as lists, only with
-`()`s instead of `[]`s. e.g. `(1, 2, 3)` instead of `[1, 2, 3]`.
+When creating tuples of elements you can use the same syntax as lists, except
+with `()`s instead of `[]`s. e.g. `(1, 2, 3)` instead of `[1, 2, 3]`.
 `tuple([1, 2, 3])` creates a list, then builds a tuple out of the elements in
 that list and discards the list, which is a bunch of extra wasteful work. This
 includes empty tuples `empty_tuple = ()`.
