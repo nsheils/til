@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+      <title>Tags - Today I Learned — Natalie Sheils</title>
+    <link>https://nsheils.github.io/til/tags/</link>
+    <description>Tags TILs - Natalie Sheils</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 26 May 2025 20:41:46 -0500</lastBuildDate>
+    
+	<atom:link href="https://nsheils.github.io/til/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+
+    
+    <item>
+      <title>Github</title>
+      <link>https://nsheils.github.io/til/tags/github/</link>
+      <pubDate>Mon, 26 May 2025 20:41:46 -0500</pubDate>
+      
+      <guid>https://nsheils.github.io/til/tags/github/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Git</title>
+      <link>https://nsheils.github.io/til/tags/git/</link>
+      <pubDate>Wed, 20 Nov 2024 08:06:14 -0600</pubDate>
+      
+      <guid>https://nsheils.github.io/til/tags/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Graphite</title>
+      <link>https://nsheils.github.io/til/tags/graphite/</link>
+      <pubDate>Wed, 20 Nov 2024 08:06:14 -0600</pubDate>
+      
+      <guid>https://nsheils.github.io/til/tags/graphite/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>https://nsheils.github.io/til/tags/python/</link>
+      <pubDate>Wed, 20 Nov 2024 08:02:16 -0600</pubDate>
+      
+      <guid>https://nsheils.github.io/til/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Pydantic</title>
+      <link>https://nsheils.github.io/til/tags/pydantic/</link>
+      <pubDate>Wed, 09 Oct 2024 16:42:53 -0500</pubDate>
+      
+      <guid>https://nsheils.github.io/til/tags/pydantic/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Google-Bigquery</title>
+      <link>https://nsheils.github.io/til/tags/google-bigquery/</link>
+      <pubDate>Wed, 25 Sep 2024 09:55:07 -0500</pubDate>
+      
+      <guid>https://nsheils.github.io/til/tags/google-bigquery/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>JSON</title>
+      <link>https://nsheils.github.io/til/tags/json/</link>
+      <pubDate>Wed, 25 Sep 2024 09:55:07 -0500</pubDate>
+      
+      <guid>https://nsheils.github.io/til/tags/json/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SQL</title>
+      <link>https://nsheils.github.io/til/tags/sql/</link>
+      <pubDate>Wed, 25 Sep 2024 09:55:07 -0500</pubDate>
+      
+      <guid>https://nsheils.github.io/til/tags/sql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Plotly</title>
+      <link>https://nsheils.github.io/til/tags/plotly/</link>
+      <pubDate>Mon, 23 Sep 2024 08:15:20 -0500</pubDate>
+      
+      <guid>https://nsheils.github.io/til/tags/plotly/</guid>
+      <description></description>
+    </item>
+    
+
+  </channel>
+</rss>

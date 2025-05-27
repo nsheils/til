@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+      <title>Graphite - Today I Learned — Natalie Sheils</title>
+    <link>https://nsheils.github.io/til/tags/graphite/</link>
+    <description>Graphite TILs - Natalie Sheils</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 20 Nov 2024 08:06:14 -0600</lastBuildDate>
+    
+	<atom:link href="https://nsheils.github.io/til/tags/graphite/index.xml" rel="self" type="application/rss+xml" />
+    
+
+    
+    <item>
+      <title>How to use graphite to manage stacks of PRs better</title>
+      <link>https://nsheils.github.io/til/posts/how-to-use-graphite-to-manage-stacks-of-prs-better/</link>
+      <pubDate>Wed, 20 Nov 2024 08:06:14 -0600</pubDate>
+      
+      <guid>https://nsheils.github.io/til/posts/how-to-use-graphite-to-manage-stacks-of-prs-better/</guid>
+      <description>Graphite is a tool to help manage stacked PRs. It promotes the creation of small, review-able PRs. It also promotes a specific style of git commands which can be useful.
+</description>
+    </item>
+    
+
+  </channel>
+</rss>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="description" content="
+    I finally got around to setting some sensible defaults to personalize GitHub.
+The following script works well to set what makes sense for me.
+">
+
+        <link rel="shortcut icon" href="https://nsheils.github.io/til/favicon.ico">
+
+        
+            
+
+        
+        <link rel="stylesheet" href="/til/css/main.min.css">
+
+        
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://nsheils.github.io/til/posts/how-to-set-sensible-defaults-for-github/" />
+<meta property="og:title" content="TIL How to set sensible defaults for github — Natalie Sheils" />
+<meta property="og:description" content="I finally got around to setting some sensible defaults to personalize GitHub.
+The following script works well to set what makes sense for me. — can be read in 2 minutes" />
+
+
+
+        <title>
+    TIL How to set sensible defaults for github — Natalie Sheils
+</title>
+
+        
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-4500T4RE03"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {dataLayer.push(arguments); }
+
+            
+            window['ga-disable-G-4500T4RE03'] = location.hostname != "nsheils.github.io/til/";
+            gtag('js', new Date());
+            gtag('config', 'G-4500T4RE03');
+        </script>
+
+    </head>
+
+    <body>
+        
+            <header id="banner">
+                <h2><a href="https://nsheils.github.io/til/">Today I learned&hellip;</a></h2>
+            </header>
+        
+
+        <main id="content">
+            
+    <article>
+        <header id="post-header">
+            <div id="date_sentence">
+                On <time>May 26, 2025</time>, <a href="https://nsheils.github.io" title="that is, Natalie Sheils">I</a> learned ...
+            </div>
+            <h1>How to set sensible defaults for github</h1>
+        </header><p>I finally got around to setting some sensible defaults to personalize GitHub.
+The following script works well to set what makes sense for me.</p>
+<pre tabindex="0"><code>script_path = &#34;/mnt/data/setup_git_config.sh&#34;
+new_script_content = textwrap.dedent(&#34;&#34;&#34;\
+    #!/usr/bin/env bash
+    # ----------------------------------------------------------
+    # Git personal bootstrap script
+    # Sets Natalie Sheils’s preferred global Git configuration.
+    # Run once:  bash setup_git_config.sh
+    # ----------------------------------------------------------
+    set -e
+    
+    echo &#34;Applying global Git configuration...&#34;
+    
+    # ----------------------------------------------------------
+    # Core identity &amp; defaults
+    # ----------------------------------------------------------
+    git config --global core.editor &#34;vim&#34;
+    git config --global init.defaultBranch main
+    git config --global user.name &#34;nsheils&#34;
+    git config --global user.email &#34;natalie.sheils@gmail.com&#34;
+    
+    # ----------------------------------------------------------
+    # History &amp; pull behavior
+    # ----------------------------------------------------------
+    git config --global pull.rebase true
+    git config --global rebase.autoStash true
+    git config --global fetch.prune true
+    
+    # ----------------------------------------------------------
+    # Push ergonomics
+    # ----------------------------------------------------------
+    git config --global push.autoSetupRemote true
+    git config --global push.default current
+    git config --global remote.pushDefault origin
+    git config --global push.ff only
+    
+    # ----------------------------------------------------------
+    # Diff &amp; merge clarity
+    # ----------------------------------------------------------
+    git config --global merge.conflictStyle diff3
+    git config --global diff.colorMoved zebra
+    
+    # ----------------------------------------------------------
+    # Safety nets
+    # ----------------------------------------------------------
+    git config --global rerere.enabled true
+    
+    # ----------------------------------------------------------
+    # UI niceties
+    # ----------------------------------------------------------
+    git config --global status.showStash true
+    
+    # ----------------------------------------------------------
+    # Helpful aliases
+    # ----------------------------------------------------------
+    git config --global alias.st &#34;status&#34;
+    
+    # -----------------------------------------------------------------
+    # Alias: git new &lt;slug&gt;
+    #
+    # Quickly create and switch to a branch that follows your naming
+    # convention:    &lt;user&gt;_&lt;MM_DD&gt;_&lt;slug&gt;
+    #
+    #   * &lt;user&gt;  : your git user.name with spaces replaced by underscores
+    #   * &lt;MM_DD&gt; : current month &amp; day (e.g., 05_26)
+    #   * &lt;slug&gt;  : whatever you pass to `git new`, automatically lower‑cased
+    #               and spaces changed to dashes.
+    #
+    # Example:
+    #   $ git new “analytics endpoint”
+    #   # on May 26 the branch becomes:
+    #   #   nsheils_05_26_analytics-endpoint
+    #
+    # First push will create the upstream automatically because we set
+    #   push.autoSetupRemote=true        (see above)
+    # -----------------------------------------------------------------
+    git config --global alias.new &#39;!f() { \
+        user=$(git config user.name | tr &#34;[:space:]&#34; _); \
+        stamp=$(date +%m_%d); \
+        raw=$(echo &#34;$1&#34; | tr &#34;[:upper:]&#34; &#34;[:lower:]&#34; | sed -e &#34;s/[[:space:]]\\+/-/g&#34;); \
+        git switch -c &#34;${user}_${stamp}_${raw}&#34;; \
+    }; f&#39;
+
+
+    echo &#34;All done! Global Git configuration updated.&#34;
+    &#34;&#34;&#34;)
+with open(script_path, &#34;w&#34;) as f:
+    f.write(new_script_content)
+os.chmod(script_path, stat.S_IRWXU | stat.S_IRGRP | stat.S_IROTH)
+</code></pre></article>
+
+        </main>
+
+        
+    <footer id="footer">
+
+        
+        
+
+        
+        
+        
+
+            
+            
+
+            
+                
+
+                
+                    <p>Other things learned about <a href="/til/tags/github/">Github</a>:</p>
+                    <ul>
+                        
+                            <li><a href="/til/posts/cannot-unfork-in-github/">Cannot un-fork in github</a></li>
+
+                            
+                            
+                        
+                            <li><a href="/til/posts/how-to-create-a-github-page/">How to create a github page</a></li>
+
+                            
+                            
+                        
+                    </ul>
+                
+
+            
+
+        
+
+        <br/>
+        <hr color="#eee"/>
+
+        
+            <p>⌨️ Jump to the previous TIL using the ◀️ cursor key.</p>
+        
+        
+        
+    </footer>
+
+
+        
+    <script src="//cdnjs.cloudflare.com/ajax/libs/mousetrap/1.4.6/mousetrap.min.js"></script>
+    <script>
+        
+            Mousetrap.bind("left", function() { window.location.replace("\/til\/posts\/how-to-use-graphite-to-manage-stacks-of-prs-better\/"); })
+        
+
+        
+    </script>
+
+    </body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="description" content="
+    It&rsquo;s possible to create JSON objects from a table in SQL. For example, given a table with columns colA, colB, colC if I wanted to create a new table with columns id and json_object where the values in the json_object column were {&#39;mycolA&#39;: value_from_colA, &#39;mycolB&#39;: value_from_colB} the appropriate SQL query would be
+">
+
+        <link rel="shortcut icon" href="https://nsheils.github.io/til/favicon.ico">
+
+        
+            
+
+        
+        <link rel="stylesheet" href="/til/css/main.min.css">
+
+        
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://nsheils.github.io/til/posts/how-to-create-a-json-object-in-a-sql-query/" />
+<meta property="og:title" content="TIL How to create a json object in a SQL query — Natalie Sheils" />
+<meta property="og:description" content="It&rsquo;s possible to create JSON objects from a table in SQL. For example, given a
+table with columns colA, colB, colC if I wanted to create a new table with
+columns id and json_object where the values in the json_object column were
+{&#39;mycolA&#39;: value_from_colA, &#39;mycolB&#39;: value_from_colB} the appropriate SQL
+query would be — can be read in 1 minute" />
+
+
+
+        <title>
+    TIL How to create a json object in a SQL query — Natalie Sheils
+</title>
+
+        
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-4500T4RE03"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {dataLayer.push(arguments); }
+
+            
+            window['ga-disable-G-4500T4RE03'] = location.hostname != "nsheils.github.io/til/";
+            gtag('js', new Date());
+            gtag('config', 'G-4500T4RE03');
+        </script>
+
+    </head>
+
+    <body>
+        
+            <header id="banner">
+                <h2><a href="https://nsheils.github.io/til/">Today I learned&hellip;</a></h2>
+            </header>
+        
+
+        <main id="content">
+            
+    <article>
+        <header id="post-header">
+            <div id="date_sentence">
+                On <time>September 25, 2024</time>, <a href="https://nsheils.github.io" title="that is, Natalie Sheils">I</a> learned ...
+            </div>
+            <h1>How to create a json object in a SQL query</h1>
+        </header><p>It&rsquo;s possible to create JSON objects from a table in SQL. For example, given a
+table with columns <code>colA</code>, <code>colB</code>, <code>colC</code> if I wanted to create a new table with
+columns <code>id</code> and <code>json_object</code> where the values in the <code>json_object</code> column were
+<code>{'mycolA': value_from_colA, 'mycolB': value_from_colB}</code> the appropriate SQL
+query would be</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> colC <span style="color:#66d9ef">as</span> id,
+</span></span><span style="display:flex;"><span>ARRAY_AGG(JSON_OBJECT(<span style="color:#e6db74">&#39;mycolA&#39;</span>, colA, <span style="color:#e6db74">&#39;mycolB&#39;</span>, colB)) <span style="color:#66d9ef">AS</span> json_object
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> <span style="color:#f92672">`</span>my_project.my_table.this_cool_table<span style="color:#f92672">`</span>
+</span></span></code></pre></div><p>This should create a new table that looks like this:</p>
+<hr>
+<table>
+  <thead>
+      <tr>
+          <th>id</th>
+          <th>json_object</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>1</td>
+          <td>{&lsquo;mycolA&rsquo;: &lsquo;value1&rsquo;, &lsquo;mycolB&rsquo;: &lsquo;value2&rsquo;}</td>
+      </tr>
+      <tr>
+          <td>2</td>
+          <td>{&lsquo;mycolA&rsquo;: &lsquo;value3&rsquo;, &lsquo;mycolB&rsquo;: &lsquo;value4&rsquo;}</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+</article>
+
+        </main>
+
+        
+    <footer id="footer">
+
+        
+        
+
+        
+        
+        
+
+            
+            
+
+            
+                
+
+                
+
+            
+
+        
+
+            
+            
+
+            
+                
+
+                
+
+            
+
+        
+
+            
+            
+
+            
+                
+
+                
+
+            
+
+        
+
+        <br/>
+        <hr color="#eee"/>
+
+        
+        
+        
+            <p>⌨️ Jump to the previous/next TIL using the ◀️ or ▶️ cursor keys.</p>
+        
+    </footer>
+
+
+        
+    <script src="//cdnjs.cloudflare.com/ajax/libs/mousetrap/1.4.6/mousetrap.min.js"></script>
+    <script>
+        
+            Mousetrap.bind("left", function() { window.location.replace("\/til\/posts\/to-create-stacked-and-grouped-bar-charts\/"); })
+        
+
+        
+            Mousetrap.bind("right", function() { window.location.replace("\/til\/posts\/pydantic-models-for-datetime-can-be-detailed\/"); })
+        
+    </script>
+
+    </body>
+</html>
